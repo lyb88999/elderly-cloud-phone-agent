@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<hierarchy rotation="0">
+  <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.android.systemui" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][1080,1920]">
+    <node index="0" text="微信" resource-id="" class="android.widget.TextView" package="com.tencent.mm" content-desc="打开微信应用" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[100,300][280,480]" />
+    <node index="1" text="支付宝" resource-id="" class="android.widget.TextView" package="com.eg.android.AlipayGphone" content-desc="打开支付宝应用" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[400,300][580,480]" />
+    <node index="2" text="电话" resource-id="" class="android.widget.TextView" package="com.android.dialer" content-desc="打开电话应用" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[700,300][880,480]" />
+    <node index="3" text="相机" resource-id="" class="android.widget.TextView" package="com.android.camera" content-desc="打开相机应用" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[100,600][280,780]" />
+  </node>
+</hierarchy>

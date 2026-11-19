@@ -105,12 +105,13 @@ class VoiceToActionLoop:
 
     def _execute(self, action: Action) -> None:
         screen = self.phone.current_screen()
+        screenshot = self.phone.screenshot()
         if action.kind == "open_app":
             package = self._resolve_package(action.target, screen)
             if not self.phone.open_app(package):
                 raise RuntimeError(f"打开 {action.target} 失败")
             return
-        element = self.grounding.locate(screen, action.target)
+        element = self.grounding.locate(screen, action.target, screenshot)
         if element is None:
             raise RuntimeError(f"屏幕上找不到“{action.target}”")
         if not self.phone.tap(element):

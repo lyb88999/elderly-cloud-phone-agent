@@ -2,19 +2,35 @@
 # Copy to config.yaml and fill in your own values. config.yaml is gitignored.
 
 asr:
-  engine: whisper          # whisper | mock
-  model: base              # tiny / base / small / medium / large
+  engine: faster-whisper    # faster-whisper | whisper | mock
+  model: tiny              # tiny / base / small / medium / large
   language: zh
+  # initial_prompt 默认会写“请用简体中文转录。手机应用有微信、支付宝……”，
+  # 作用是把 tiny 模型稳在简体，并防“支付宝”听成“支付堡”这类同音错误
+
+tts:
+  engine: edge-tts         # edge-tts | gtts | mock
+  voice: zh-CN-XiaoxiaoNeural
 
 llm:
-  provider: openai         # openai | mock
+  provider: openai         # openai | deepseek | mock
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  base_url: https://api.openai.com/v1
+  # DeepSeek 示例：base_url https://api.deepseek.com/v1，
+  # model deepseek-chat，api_key_env DEEPSEEK_API_KEY
+
+vision:
+  provider: openai         # openai（需要能看图的模型，如 gpt-4o-mini）
   model: gpt-4o-mini
   api_key_env: OPENAI_API_KEY
 
 phone:
+  adb: adb                 # 系统 adb 的路径；demo 用 demo/fake-adb
+  serial: ""               # 设备序列号，空表示用第一台连上的设备
   adb_host: 127.0.0.1
   adb_port: 5555
-  webrtc_url: ""           # 云手机 WebRTC 信令地址
+  webrtc_url: ""           # 云手机 WebRTC 信令地址（下一步接）
   heartbeat_interval_sec: 5
 
 safety:

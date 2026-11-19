@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<hierarchy rotation="0">
+  <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.eg.android.AlipayGphone" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][1080,1920]">
+    <node index="0" text="支付宝" resource-id="" class="android.widget.TextView" package="com.eg.android.AlipayGphone" content-desc="支付宝标题" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[100,100][300,180]" />
+    <node index="1" text="首页" resource-id="" class="android.widget.TextView" package="com.eg.android.AlipayGphone" content-desc="首页" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[100,1700][300,1800]" />
+    <node index="2" text="财富" resource-id="" class="android.widget.TextView" package="com.eg.android.AlipayGphone" content-desc="财富" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[400,1700][600,1800]" />
+    <node index="3" text="我的" resource-id="" class="android.widget.TextView" package="com.eg.android.AlipayGphone" content-desc="我的" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[800,1700][1000,1800]" />
+  </node>
+</hierarchy>

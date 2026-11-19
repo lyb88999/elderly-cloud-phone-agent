@@ -1,5 +1,12 @@
 # 跑 mock 模式不需要任何第三方依赖（只用 Python 标准库）。
-# 接入真实服务时再安装下面这些：
+# 跑 demo / 接真实服务时安装下面这些：
 pyyaml>=6.0              # 读取 config.yaml
-openai-whisper>=20231117  # ASR：语音转文字
+faster-whisper>=1.2.1    # ASR：语音转文字，CPU 就能跑
+# faster-whisper 1.2.1 调用 av.open(..., metadata_errors=...)，
+# PyAV 15+ 删了这个参数；14.4.0 在部分平台没有 wheel，
+# 所以固定用有 wheel 的 14.2.0。
+av==14.2.0
+openai-whisper>=20231117  # ASR 备选：有 GPU 时用（需要 torch）
+edge-tts>=6.0            # TTS：微软免费语音，不用 key（走 WebSocket）
+gTTS>=2.5                # TTS 备选：Google 翻译语音，走普通 HTTPS
 openai>=1.0              # LLM：任务分解（也可以换成你自己的模型客户端）
