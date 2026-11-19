@@ -1,0 +1,23 @@
+# 复制成 config.yaml 后填自己的配置。config.yaml 已进 .gitignore，不会提交。
+# Copy to config.yaml and fill in your own values. config.yaml is gitignored.
+
+asr:
+  engine: whisper          # whisper | mock
+  model: base              # tiny / base / small / medium / large
+  language: zh
+
+llm:
+  provider: openai         # openai | mock
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+
+phone:
+  adb_host: 127.0.0.1
+  adb_port: 5555
+  webrtc_url: ""           # 云手机 WebRTC 信令地址
+  heartbeat_interval_sec: 5
+
+safety:
+  spending_limit_cny: 200  # 单笔消费上限，超过必须人工确认
+  max_retries: 3           # 视觉-动作循环失败 3 次后转人工
+  fallback_contact: ""     # 兜底联系的家人电话

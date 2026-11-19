@@ -1,0 +1,5 @@
+# 跑 mock 模式不需要任何第三方依赖（只用 Python 标准库）。
+# 接入真实服务时再安装下面这些：
+pyyaml>=6.0              # 读取 config.yaml
+openai-whisper>=20231117  # ASR：语音转文字
+openai>=1.0              # LLM：任务分解（也可以换成你自己的模型客户端）
